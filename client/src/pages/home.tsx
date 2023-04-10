@@ -6,7 +6,9 @@ import {
     PropertyReferrals,
     TotalRevenue,
     PropertyCard,
-} from "components";
+} from "./components";
+
+import PropertyCard from "../components/common/PropertyCard"
 
 const Home = () => {
     const { data, isLoading, isError } = useList({
