@@ -1,4 +1,4 @@
-import { useList } from "@pankod/refine-core";
+import { useList } from "@refinedev/core";
 import { Typography, Box, Stack } from "@mui/material";
 
 import {
@@ -6,9 +6,7 @@ import {
     PropertyReferrals,
     TotalRevenue,
     PropertyCard,
-} from "./components";
-
-import PropertyCard from "../components/common/PropertyCard"
+} from "../components";
 
 const Home = () => {
     const { data, isLoading, isError } = useList({

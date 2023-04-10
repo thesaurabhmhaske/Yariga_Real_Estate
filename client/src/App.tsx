@@ -3,14 +3,14 @@ import React from "react";
 import {
     GitHubBanner,
     Refine,
-    AuthProvider,
-} from "@pankod/refine-core";
+    LegacyAuthProvider as AuthProvider,
+} from "@refinedev/core";
 import {
     notificationProvider,
     RefineSnackbarProvider,
     ReadyPage,
     ErrorComponent,
-} from "@pankod/refine-mui";
+} from "@refinedev/mui";
 import { CssBaseline, GlobalStyles } from "@mui/material";
 import {
     AccountCircleOutlined,
@@ -20,8 +20,8 @@ import {
     VillaOutlined,
 } from "@mui/icons-material";
 
-import dataProvider from "@pankod/refine-simple-rest";
-import routerProvider from "@pankod/refine-react-router-v6/src";
+import dataProvider from "@refinedev/simple-rest";
+import routerProvider from "@refinedev/react-router-v6/legacy";
 import axios, { AxiosRequestConfig } from "axios";
 import { Title, Sider, Layout, Header } from "./components/layout";
 import { ColorModeContextProvider } from "./contexts";
@@ -172,8 +172,8 @@ function App() {
                     Sider={Sider}
                     Layout={Layout}
                     Header={Header}
-                    routerProvider={routerProvider}
-                    authProvider={authProvider}
+                    legacyRouterProvider={routerProvider}
+                    legacyAuthProvider={authProvider}
                     LoginPage={Login}
                     DashboardPage={Home}
                 />
